@@ -116,14 +116,14 @@ The pipeline runs in five phases:
 4. **Aggregate with decay weighting**, compute diffs, detect anomalies and transitions, gather user context
 5. **Generate insights** using 8 parallel LLM prompts (with temporal and user context injected) plus a synthesis prompt, then **render** a self-contained HTML report
 
-Results are cached in `~/.pi/agent/usage-data/`:
+Results are cached in `~/.pi/agent/data/pi-insights/`:
 
 | Path | Contents |
 |------|----------|
-| `session-meta/<id>.json` | Deterministic stats, cached permanently |
-| `facets/<id>.json` | LLM-extracted facets, cached permanently (clear with `--refresh`) |
-| `report.html` | Last generated report |
-| `report.md` | Last markdown export (when using `--md`) |
+| `data/pi-insights/session-meta/<id>.json` | Deterministic stats, cached permanently |
+| `data/pi-insights/facets/<id>.json` | LLM-extracted facets, cached permanently (clear with `--refresh`) |
+| `data/pi-insights/report.html` | Last generated report |
+| `data/pi-insights/report.md` | Last markdown export (when using `--md`) |
 
 ## Requirements
 

@@ -13,7 +13,7 @@
  *   /insights --refresh   — invalidate all LLM facet caches, re-extract
  *   /insights --no-open   — don't open the report in the browser
  *
- * Data dir: ~/.pi/agent/usage-data/
+ * Data dir: ~/.pi/agent/data/pi-insights/
  *   session-meta/<id>.json   deterministic stats, cached permanently
  *   facets/<id>.json         LLM-extracted facets, cached permanently
  *   report.html              last generated report
@@ -35,7 +35,7 @@ const execFile = promisify(execFileCb);
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const DATA_DIR = join(homedir(), ".pi", "agent", "usage-data");
+const DATA_DIR = join(homedir(), ".pi", "agent", "data", "pi-insights");
 const FACETS_DIR = join(DATA_DIR, "facets");
 const META_DIR = join(DATA_DIR, "session-meta");
 const REPORT_PATH = join(DATA_DIR, "report.html");
